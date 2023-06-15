@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CreatedUser = ({createdUser}) => {
+const UserDisplay = ({createdUser}) => {
     return (
         <div>
         <h1>Username: {createdUser.username}</h1>
@@ -10,4 +10,4 @@ const CreatedUser = ({createdUser}) => {
     )
 }
 
-export default CreatedUser;
+export default UserDisplay;
