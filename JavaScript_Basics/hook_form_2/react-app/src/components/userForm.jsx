@@ -39,7 +39,7 @@ const UserForm = ({ onUserCreate, createdUser }) => {
                     <p><span style={{ fontWeight: 'bold' }}>Email:</span> {createdUser.email}</p>
                     <p><span style={{ fontWeight: 'bold' }}>Password:</span> {createdUser.password}</p>
                 </div>
-            )}
+            )};
         </div>
     );
 }
