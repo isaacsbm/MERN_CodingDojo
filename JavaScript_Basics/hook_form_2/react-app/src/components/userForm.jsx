@@ -10,7 +10,7 @@ const UserForm = ({ onUserCreate, createdUser }) => {
 
         const newUser = { username, email, password };
         console.log("Created:", newUser);
-        onUserCreate(newUser);
+        // onUserCreate(newUser);
         setUsername("");
         setEmail("");
         setPassword("");
@@ -33,13 +33,13 @@ const UserForm = ({ onUserCreate, createdUser }) => {
                 </div>
                 <button type='submit' value="Create User">Create User!</button>
             </form>
-            {createdUser && (
+            {/* {createdUser && ( */}
                 <div>
-                    <p><span style={{ fontWeight: 'bold' }}>Username:</span> {createdUser.username}</p>
-                    <p><span style={{ fontWeight: 'bold' }}>Email:</span> {createdUser.email}</p>
-                    <p><span style={{ fontWeight: 'bold' }}>Password:</span> {createdUser.password}</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Username:</span> {username}</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Email:</span> {email}</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Password:</span> {password}</p>
                 </div>
-            )};
+            {/* )}; */}
         </div>
     );
 }
