@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './App.css'
+import Tabs from './components/tabs'
+
 
 function App() {
   return (
-    <h1>Hello World!</h1>
+    <Tabs />
   )
 }
 
