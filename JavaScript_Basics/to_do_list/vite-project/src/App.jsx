@@ -1,14 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Form from './components/form'
+import Display from './components/display'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const [createdList, onCreatedList] = useState([]);
+  const handleForm = (list) => {
+    const updatedList = [...createdList, String(list)];
+    onCreatedList(updatedList);
+  }
   return (
-    <div></div>
+    <div>
+      <Form onCreatedList={handleForm} createdList={createdList}/>
+      <Display createdList={createdList} />
+    </div>
   )
 }
 
-export default App
+export default App;
