@@ -12,7 +12,7 @@ const Form = ({createdList, onCreatedList}) => {
             setFormError("list must be longer than 2 characters!")
         } else {
             setFormError("");
-            onCreatedList();
+            onCreatedList(); //setlist to [...createdlist, list]
             setList('');
         }
     };
