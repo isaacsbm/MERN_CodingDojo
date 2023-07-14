@@ -3,13 +3,15 @@ const Product = require("../models/Product");
 module.exports.createProduct = (req, res) => {
     Product.create(req.body)
         .then(newProduct => res.json(newProduct))
-        .catch(err => res.json(err))
+        .catch(err => console.log(err))
 };
 
 module.exports.getAllProducts = (req, res) => {
     Product.find()
-        .then(allProducts => res.json(allProducts))
-        .catch(err => res.json(err))
+        .then(allProducts => {
+            console.log("All Products Grabbed!")
+            res.json(allProducts)})
+        .catch(err => console.log(err))
 };
 
 module.exports.getOneProduct = (req, res) => {

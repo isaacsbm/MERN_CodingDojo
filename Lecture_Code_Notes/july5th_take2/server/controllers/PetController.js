@@ -2,7 +2,11 @@ const Pet = require("../models/Pet");
 
 module.exports.findAllPets = (req, res) => {
     Pet.find()
-        .then(allPets => res.json(allPets))
+        .then(allPets =>{
+            console.log("All Pets Grabbed!")
+            res.json(allPets)
+            
+        })
         .catch(err => console.log(err));
 };
 
@@ -25,7 +29,7 @@ module.exports.updatePet = (req, res) => {
         {new: true, runValidators: true})
         .then(updatedPet => res.json(updatedPet))
         .catch(err => res.json(err))
-}
+};
 
 
 module.exports.deletePet = (req, res) => {

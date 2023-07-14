@@ -1,8 +1,9 @@
 const ProductController = require("../controllers/ProductController");
 
 module.exports = app => {
-    app.get("/api/product", ProductController.getAllProducts);
-    app.post("/api/product", ProductController.createProduct);
-    app.patch("/api/product/:id", ProductController.getOneProduct);
-    app.delete("/api/product/:id", ProductController.deleteProduct)
+    app.get("/api/products", ProductController.getAllProducts);
+    app.get("/api/products/:id", ProductController.getOneProduct);
+    app.post('/api/products', ProductController.createProduct);
+    app.patch("/api/products/:id", ProductController.updateProduct);
+    app.delete("/api/products/:id", ProductController.deleteProduct);
 };
