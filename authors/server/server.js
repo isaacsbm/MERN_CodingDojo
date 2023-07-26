@@ -4,11 +4,12 @@ const port = 8000;
 const cors = require("cors");
 app.use(cors());
 
-//!Require Config
+require("./config/mongoose.config");
 
 app.use(express.json(), express.urlencoded({extended: true}));
 
-//! Require Routes
+const AuthorsRoutes = require("./routes/AuthorsRoutes")
+AuthorsRoutes(app);
 
 app.listen(port, ()=> console.log("The Server is listening on port " + port));
 

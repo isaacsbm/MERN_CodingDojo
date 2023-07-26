@@ -1,7 +1,7 @@
 const Product = require("../models/Product");
 
 module.exports.createProduct = (req, res) => {
-    Product.create(req.body)
+    Product.create()
         .then(newProduct => res.json(newProduct))
         .catch(err => console.log(err))
 };

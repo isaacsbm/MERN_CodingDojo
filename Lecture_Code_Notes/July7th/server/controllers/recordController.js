@@ -3,7 +3,9 @@ const Record = require("../models/Record")
 module.exports = {
     findAllRecords: (req, res) => {
         Record.find()
-            .then(allRecords => res.json(allRecords))
+            .then(allRecords => {
+                console.log("All Records grabbed!"),
+                res.json(allRecords)})
             .catch(err => res.status(400).json(err))
     },
     findOneRecord: (req, res) => {
